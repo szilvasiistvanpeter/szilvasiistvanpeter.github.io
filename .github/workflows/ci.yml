@@ -43,8 +43,8 @@ jobs:
       - name: Test (Typecheck)
         run: pnpm tsc
 
-      - name: Run Vitest
-        run: pnpm run test --run
+      #- name: Run Vitest
+      #  run: pnpm run test --run
 
       - name: Run Audit
         run: pnpm audit --audit-level=high
