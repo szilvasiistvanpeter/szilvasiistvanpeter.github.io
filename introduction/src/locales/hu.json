@@ -17,7 +17,9 @@
       "msc_teacher": "Mesterképzés, amely a pedagógiai módszertanra és a digitális kultúra oktatására fókuszál.",
       "msc_eng": "Adatbányászati algoritmusok és térinformatikai rendszerek (GIS) specializáció.",
       "bsc_prog": "Szoftverfejlesztési alapok, webalkalmazások készítése (.NET)."
-    }
+    },
+    "eyebrow": "Szakmai érdeklődés",
+    "title": "Ami most foglalkoztat"
   },
   "jobs": {
     "eyebrow": "Pályafutás",
@@ -51,7 +53,23 @@
     "pet": "Pajti, a menhelyi kutyám 2022 óta velünk él; nagy kutyabarát és cicakedvelő vagyok.",
     "gamer": "Gamer: PlayStation & PC",
     "relationship": "Boldog párkapcsolat",
-    "homelab": "Szabadidőmben saját homelab szerveremet fejlesztem, így a DevOps iránti érdeklődésemet otthoni projektekkel is követem."
+    "homelab": "Szabadidőmben saját homelab szerveremet fejlesztem, így a DevOps iránti érdeklődésemet otthoni projektekkel is követem.",
+    "focusEyebrow": "Szakmai érdeklődés",
+    "focusTitle": "Ami most foglalkoztat",
+    "focus": {
+      "development": {
+        "title": "Szoftverfejlesztés",
+        "description": "Webalkalmazások és full-stack megoldások tervezése, fejlesztése."
+      },
+      "teaching": {
+        "title": "Oktatás",
+        "description": "Egyetemi kurzusok fejlesztése és az informatikai tudás átadása."
+      },
+      "homelab": {
+        "title": "Homelab és DevOps",
+        "description": "Saját szerver fejlesztése és DevOps technológiák kipróbálása otthoni projekteken."
+      }
+    }
   },
   "contacts": {
     "title": "Lépjünk kapcsolatba!",
