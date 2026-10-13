@@ -161,7 +161,7 @@ export default function Project() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    sx={{ color: '#888', display: 'block' }}
+                    sx={{ color: 'text.secondary', display: 'block' }}
                   >
                     • Prettier & Linting
                     <br />
