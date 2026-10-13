@@ -50,7 +50,7 @@ export default function ResponsiveAppBar() {
         <Toolbar disableGutters>
           <TerminalIcon
             sx={{
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', lg: 'flex' },
               mr: 1,
               color: 'primary.light',
             }}
@@ -63,7 +63,7 @@ export default function ResponsiveAppBar() {
             to="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', lg: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               color: 'inherit',
@@ -73,7 +73,7 @@ export default function ResponsiveAppBar() {
             {t('welcome')}
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', lg: 'none' } }}>
             <IconButton
               size="large"
               aria-label={t('nav.menu')}
@@ -92,7 +92,7 @@ export default function ResponsiveAppBar() {
               transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{ display: { xs: 'block', lg: 'none' } }}
             >
               {pages.map((page) => (
                 <MenuItem
@@ -120,7 +120,7 @@ export default function ResponsiveAppBar() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', lg: 'flex' },
               gap: { md: 0, lg: 0.5 },
             }}
           >
