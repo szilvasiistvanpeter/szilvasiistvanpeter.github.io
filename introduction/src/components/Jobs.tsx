@@ -10,7 +10,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import { jobs } from '../const';
@@ -141,7 +141,7 @@ export default function Jobs() {
                     )}
 
                     <Stack direction="row" spacing={1} sx={{ alignItems: 'flex-start' }}>
-                      <WorkOutlineIcon fontSize="small" sx={{ color: 'text.secondary', mt: 0.25 }} />
+                      <WorkOutlineOutlinedIcon fontSize="small" sx={{ color: 'text.secondary', mt: 0.25 }} />
                       <Box>
                         <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 0.75 }}>
                           {t('jobs.technologies')}
