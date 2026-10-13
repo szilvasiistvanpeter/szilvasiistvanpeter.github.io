@@ -13,6 +13,8 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
+import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -157,6 +159,85 @@ export default function About() {
             </Paper>
           </Grid>
         </Grid>
+
+        <Box sx={{ mt: { xs: 4, md: 5 } }}>
+          <Stack spacing={1} sx={{ mb: 2.5 }}>
+            <Typography
+              variant="overline"
+              sx={{ color: 'primary.light', fontWeight: 700, letterSpacing: 1.5 }}
+            >
+              {t('about.focusEyebrow')}
+            </Typography>
+            <Typography variant="h5" component="h2" sx={{ fontWeight: 700 }}>
+              {t('about.focusTitle')}
+            </Typography>
+          </Stack>
+
+          <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 2.5,
+                  height: '100%',
+                  bgcolor: '#132f4c',
+                  borderRadius: 3,
+                  border: '1px solid #1e4976',
+                }}
+              >
+                <CodeRoundedIcon sx={{ color: 'primary.light', mb: 1 }} />
+                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                  {t('about.focus.development.title')}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {t('about.focus.development.description')}
+                </Typography>
+              </Paper>
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 2.5,
+                  height: '100%',
+                  bgcolor: '#132f4c',
+                  borderRadius: 3,
+                  border: '1px solid #1e4976',
+                }}
+              >
+                <SchoolRoundedIcon sx={{ color: 'primary.light', mb: 1 }} />
+                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                  {t('about.focus.teaching.title')}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {t('about.focus.teaching.description')}
+                </Typography>
+              </Paper>
+            </Grid>
+
+            <Grid size={{ xs: 12, md: 4 }}>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 2.5,
+                  height: '100%',
+                  bgcolor: '#132f4c',
+                  borderRadius: 3,
+                  border: '1px solid #1e4976',
+                }}
+              >
+                <DnsOutlinedIcon sx={{ color: 'primary.light', mb: 1 }} />
+                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
+                  {t('about.focus.homelab.title')}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {t('about.focus.homelab.description')}
+                </Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Box>
       </Container>
     </Box>
   );
