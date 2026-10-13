@@ -54,8 +54,8 @@
     "title": "Rólam röviden",
     "content": "Egerben születtem, és ma is itt élek. Több mint nyolc éve fejlesztek szoftvereket, jelenleg full-stack fejlesztőként és egyetemi óraadóként dolgozom. Pályám során a Siemensnél, a Deutsche Telekomnál és más nagyvállalati csapatokban is tapasztalatot szereztem. A munkában a megbízható, jól használható megoldások motiválnak.",
     "pet": "Pajti, a menhelyi kutyám 2022 óta velünk él; nagy kutyabarát és cicakedvelő vagyok.",
-    "gamer": "Gamer: PlayStation & PC",
-    "relationship": "Boldog párkapcsolat",
+    "gamer": "Kikapcsolódás: PlayStation és PC",
+    "relationship": "Párkapcsolatban",
     "homelab": "Szabadidőmben saját homelab szerveremet fejlesztem, így a DevOps iránti érdeklődésemet otthoni projektekkel is követem.",
     "focusEyebrow": "Szakmai érdeklődés",
     "focusTitle": "Fejlesztés, oktatás, kísérletezés",
@@ -72,7 +72,8 @@
         "title": "Homelab és DevOps",
         "description": "Saját szerveremen DevOps eszközöket és automatizálási megoldásokat próbálok ki."
       }
-    }
+    },
+    "role": "Senior full-stack fejlesztő"
   },
   "contacts": {
     "title": "Beszéljünk",
@@ -84,7 +85,8 @@
       "email": "Email",
       "phone": "Mobil"
     },
-    "location": "Eger, Magyarország"
+    "location": "Eger, Magyarország",
+    "eyebrow": "Elérhetőségek"
   },
   "project": {
     "title": "Személyes portfólió és szakmai bemutatkozó oldal",
