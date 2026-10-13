@@ -54,8 +54,8 @@
     "title": "About Me",
     "content": "I was born in Eger and still live here. I have been building software for over eight years, and currently work as both a full-stack developer and a university lecturer. My career includes work with Siemens, Deutsche Telekom, and other enterprise teams. I am motivated by building reliable, useful solutions.",
     "pet": "Pajti, my rescue dog, has been part of our family since 2022. I also love dogs and cats.",
-    "gamer": "Gamer: PlayStation & PC",
-    "relationship": "In happy relationship",
+    "gamer": "Off work: PlayStation and PC",
+    "relationship": "In a relationship",
     "homelab": "In my free time, I build and improve my own homelab server, exploring my interest in DevOps through personal projects.",
     "focusEyebrow": "Areas of interest",
     "focusTitle": "Building, teaching, experimenting",
@@ -72,7 +72,8 @@
         "title": "Homelab and DevOps",
         "description": "I explore DevOps tools and automation on a homelab server I build and maintain myself."
       }
-    }
+    },
+    "role": "Senior Full-Stack Developer"
   },
   "contacts": {
     "title": "Let's talk",
@@ -84,7 +85,8 @@
       "email": "Email",
       "phone": "Phone"
     },
-    "location": "Eger, Hungary"
+    "location": "Eger, Hungary",
+    "eyebrow": "Contact details"
   },
   "project": {
     "title": "Personal Portfolio and Professional Introduction Page",
