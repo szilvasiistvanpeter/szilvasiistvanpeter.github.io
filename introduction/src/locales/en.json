@@ -17,7 +17,9 @@
       "msc_teacher": "Master's program focusing on pedagogical methods and digital culture education.",
       "msc_eng": "Specialization in data mining algorithms and geographic information systems (GIS).",
       "bsc_prog": "Foundations of software development, creating web applications (.NET)."
-    }
+    },
+    "eyebrow": "Areas of interest",
+    "title": "What I'm focused on"
   },
   "jobs": {
     "eyebrow": "Career",
@@ -51,7 +53,23 @@
     "pet": "Pajti, my rescue dog, has been part of our family since 2022. I also love dogs and cats.",
     "gamer": "Gamer: PlayStation & PC",
     "relationship": "In happy relationship",
-    "homelab": "In my free time, I build and improve my own homelab server, exploring my interest in DevOps through personal projects."
+    "homelab": "In my free time, I build and improve my own homelab server, exploring my interest in DevOps through personal projects.",
+    "focusEyebrow": "Areas of interest",
+    "focusTitle": "What I'm focused on",
+    "focus": {
+      "development": {
+        "title": "Software development",
+        "description": "Designing and building web applications and full-stack solutions."
+      },
+      "teaching": {
+        "title": "Teaching",
+        "description": "Developing university courses and sharing knowledge in computing."
+      },
+      "homelab": {
+        "title": "Homelab and DevOps",
+        "description": "Improving my own server and exploring DevOps technologies through personal projects."
+      }
+    }
   },
   "contacts": {
     "title": "Get in Touch!",
