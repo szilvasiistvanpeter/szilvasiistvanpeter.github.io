@@ -30,8 +30,8 @@ export default function About() {
       sx={{
         flexGrow: 1,
         p: { xs: 2, md: 4 },
-        bgcolor: '#0a1929',
-        color: 'white',
+        bgcolor: 'background.default',
+        color: 'text.primary',
       }}
     >
       <Container maxWidth="lg">
@@ -42,10 +42,10 @@ export default function About() {
               sx={{
                 p: 3,
                 textAlign: 'center',
-                bgcolor: '#132f4c',
-                color: 'white',
+                bgcolor: 'background.paper',
+                color: 'text.primary',
                 borderRadius: 4,
-                border: '1px solid #1e4976',
+                border: '1px solid', borderColor: 'divider',
               }}
             >
               <Avatar
@@ -54,7 +54,8 @@ export default function About() {
                   width: 150,
                   height: 150,
                   m: '0 auto 20px',
-                  border: `4px solid 'var(--brand-blue)'`,
+                  border: '4px solid',
+                  borderColor: 'secondary.main',
                 }}
               />
               <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
@@ -62,7 +63,7 @@ export default function About() {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ color: 'var(--brand-blue)', mb: 2 }}
+                sx={{ color: 'primary.light', mb: 2 }}
               >
                 Senior Full-Stack Developer
               </Typography>
@@ -73,17 +74,18 @@ export default function About() {
                 sx={{ mb: 2, justifyContent: 'center' }}
               >
                 <Chip
-                  icon={<LocationOnIcon sx={{ color: 'white !important' }} />}
+                  icon={<LocationOnIcon sx={{ color: 'inherit !important' }} />}
                   label="Eger"
-                  sx={{ bgcolor: 'var(--brand-blue)', color: 'white' }}
+                  sx={{ bgcolor: 'primary.light', color: 'text.primary' }}
                 />
                 <Chip
-                  icon={<FavoriteIcon sx={{ color: '#ff1744 !important' }} />}
+                  icon={<FavoriteIcon sx={{ color: 'secondary.main !important' }} />}
                   label={t('about.relationship')}
                   sx={{
-                    bgcolor: 'rgba(255,23,68,0.1)',
-                    color: 'white',
-                    border: '1px solid #ff1744',
+                    bgcolor: 'rgba(233, 184, 111, 0.12)',
+                    color: 'text.primary',
+                    border: '1px solid',
+                    borderColor: 'secondary.dark',
                   }}
                 />
               </Stack>
@@ -95,16 +97,16 @@ export default function About() {
               elevation={0}
               sx={{
                 p: 4,
-                bgcolor: '#132f4c',
-                color: 'white',
+                bgcolor: 'background.paper',
+                color: 'text.primary',
                 borderRadius: 4,
-                border: '1px solid #1e4976',
+                border: '1px solid', borderColor: 'divider',
                 height: '100%',
               }}
             >
               <Typography
                 variant="h4"
-                sx={{ mb: 3, fontWeight: 'bold', color: 'var(--brand-blue)' }}
+                sx={{ mb: 3, fontWeight: 'bold', color: 'primary.light' }}
               >
                 {t('about.title')}
               </Typography>
@@ -125,7 +127,7 @@ export default function About() {
                       mb: 2,
                     }}
                   >
-                    <PetsIcon sx={{ color: 'var(--brand-blue)' }} />
+                    <PetsIcon sx={{ color: 'primary.light' }} />
                     <Typography variant="body2">{t('about.pet')}</Typography>
                   </Box>
                 </Grid>
@@ -138,21 +140,8 @@ export default function About() {
                       mb: 2,
                     }}
                   >
-                    <SportsEsportsIcon sx={{ color: 'var(--brand-blue)' }} />
+                    <SportsEsportsIcon sx={{ color: 'primary.light' }} />
                     <Typography variant="body2">{t('about.gamer')}</Typography>
-                  </Box>
-                </Grid>
-                <Grid size={{ xs: 12, sm: 6 }}>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      gap: 2,
-                      mb: 2,
-                    }}
-                  >
-                    <DnsOutlinedIcon sx={{ color: 'var(--brand-blue)' }} />
-                    <Typography variant="body2">{t('about.homelab')}</Typography>
                   </Box>
                 </Grid>
               </Grid>
@@ -180,9 +169,9 @@ export default function About() {
                 sx={{
                   p: 2.5,
                   height: '100%',
-                  bgcolor: '#132f4c',
+                  bgcolor: 'background.paper',
                   borderRadius: 3,
-                  border: '1px solid #1e4976',
+                  border: '1px solid', borderColor: 'divider',
                 }}
               >
                 <CodeRoundedIcon sx={{ color: 'primary.light', mb: 1 }} />
@@ -201,9 +190,9 @@ export default function About() {
                 sx={{
                   p: 2.5,
                   height: '100%',
-                  bgcolor: '#132f4c',
+                  bgcolor: 'background.paper',
                   borderRadius: 3,
-                  border: '1px solid #1e4976',
+                  border: '1px solid', borderColor: 'divider',
                 }}
               >
                 <SchoolRoundedIcon sx={{ color: 'primary.light', mb: 1 }} />
@@ -222,9 +211,9 @@ export default function About() {
                 sx={{
                   p: 2.5,
                   height: '100%',
-                  bgcolor: '#132f4c',
+                  bgcolor: 'background.paper',
                   borderRadius: 3,
-                  border: '1px solid #1e4976',
+                  border: '1px solid', borderColor: 'divider',
                 }}
               >
                 <DnsOutlinedIcon sx={{ color: 'primary.light', mb: 1 }} />
