@@ -48,9 +48,10 @@
   "about": {
     "title": "About Me",
     "content": "I am a developer with over 8 years of experience. I was born in Eger and currently live there. Throughout my career, I have proven myself at large companies such as Siemens, Deutsche Telekom, and Accenture. My goal is to deliver innovative solutions, whether it's about industrial automation or modern cloud-based systems.",
-    "pet": "Dog lover and cat enthusiast.",
+    "pet": "Pajti, my rescue dog, has been part of our family since 2022. I also love dogs and cats.",
     "gamer": "Gamer: PlayStation & PC",
-    "relationship": "In happy relationship"
+    "relationship": "In happy relationship",
+    "homelab": "In my free time, I build and improve my own homelab server, exploring my interest in DevOps through personal projects."
   },
   "contacts": {
     "title": "Get in Touch!",
