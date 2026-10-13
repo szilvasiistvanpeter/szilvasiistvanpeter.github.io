@@ -8,24 +8,36 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Schools from './components/Schools';
 import Contacts from './components/Contacts';
 import Project from './components/Project';
+import Teaching from './components/Teaching';
 import ResponsiveFooter from './core/Footer';
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#42a5f5',
-      light: '#90caf9',
-      dark: '#1976d2',
+      main: '#88c9a7',
+      light: '#b4e2c0',
+      dark: '#4c9774',
+      contrastText: '#102019',
     },
     secondary: {
-      main: '#8bd3c7',
+      main: '#e9b86f',
+      light: '#f4d39c',
+      dark: '#b98239',
+      contrastText: '#21180b',
+    },
+    success: {
+      main: '#79c99a',
     },
     background: {
-      default: '#0a1929',
-      paper: '#132f4c',
+      default: '#101817',
+      paper: '#182522',
     },
-    divider: 'rgba(144, 202, 249, 0.16)',
+    text: {
+      primary: '#f2f5f1',
+      secondary: '#aebdb4',
+    },
+    divider: 'rgba(180, 226, 192, 0.16)',
   },
   shape: {
     borderRadius: 12,
@@ -44,6 +56,7 @@ export default function App() {
           <Route path="/" element={<About />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/schools" element={<Schools />} />
+          <Route path="/teaching" element={<Teaching />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/project" element={<Project />} />
         </Routes>
