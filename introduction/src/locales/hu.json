@@ -4,7 +4,9 @@
     "jobs": "Munkahelyek",
     "schools": "Sulik",
     "contact": "Kapcsolat",
-    "project": "Projektről"
+    "project": "Projektről",
+    "teaching": "Egyetemi oktatás",
+    "menu": "Menü"
   },
   "welcome": "Szilva",
   "education": {
@@ -50,38 +52,39 @@
   },
   "about": {
     "title": "Rólam röviden",
-    "content": "Több mint 8 éves tapasztalattal rendelkező, egri születésű és jelenleg is ott élő fejlesztő vagyok. Pályafutásom során olyan nagyvállalatoknál bizonyítottam, mint a Siemens, a Deutsche Telekom és az Accenture. Célom az innovatív megoldások szállítása, legyen szó ipari automatizálásról vagy modern felhőalapú rendszerekről.",
+    "content": "Egerben születtem, és ma is itt élek. Több mint nyolc éve fejlesztek szoftvereket, jelenleg full-stack fejlesztőként és egyetemi óraadóként dolgozom. Pályám során a Siemensnél, a Deutsche Telekomnál és más nagyvállalati csapatokban is tapasztalatot szereztem. A munkában a megbízható, jól használható megoldások motiválnak.",
     "pet": "Pajti, a menhelyi kutyám 2022 óta velünk él; nagy kutyabarát és cicakedvelő vagyok.",
     "gamer": "Gamer: PlayStation & PC",
     "relationship": "Boldog párkapcsolat",
     "homelab": "Szabadidőmben saját homelab szerveremet fejlesztem, így a DevOps iránti érdeklődésemet otthoni projektekkel is követem.",
     "focusEyebrow": "Szakmai érdeklődés",
-    "focusTitle": "Ami most foglalkoztat",
+    "focusTitle": "Fejlesztés, oktatás, kísérletezés",
     "focus": {
       "development": {
         "title": "Szoftverfejlesztés",
-        "description": "Webalkalmazások és full-stack megoldások tervezése, fejlesztése."
+        "description": "Full-stack alkalmazásokat készítek; a jól használható felületeket megbízható háttérrendszerekkel kapcsolom össze."
       },
       "teaching": {
-        "title": "Oktatás",
-        "description": "Egyetemi kurzusok fejlesztése és az informatikai tudás átadása."
+        "title": "Egyetemi oktatás",
+        "description": "Az Eszterházy Károly Katolikus Egyetemen gyakorlati feladatokon keresztül adom át az informatikai ismereteket."
       },
       "homelab": {
         "title": "Homelab és DevOps",
-        "description": "Saját szerver fejlesztése és DevOps technológiák kipróbálása otthoni projekteken."
+        "description": "Saját szerveremen DevOps eszközöket és automatizálási megoldásokat próbálok ki."
       }
     }
   },
   "contacts": {
-    "title": "Lépjünk kapcsolatba!",
-    "subtitle": "Legyen szó szakmai projektről, oktatásról vagy csak egy kávéról Egerben.",
-    "description": "Itt születtem, itt élek, és innen dolgozom Senior fejlesztőként.",
+    "title": "Beszéljünk",
+    "subtitle": "Szakmai megkeresés, oktatási együttműködés vagy egy egri kávé — írj vagy hívj bátran.",
+    "description": "Egerben élek és innen dolgozom. Az alábbi csatornákon közvetlenül elérsz.",
     "labels": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
       "email": "Email",
       "phone": "Mobil"
-    }
+    },
+    "location": "Eger, Magyarország"
   },
   "project": {
     "title": "Személyes portfólió és szakmai bemutatkozó oldal",
@@ -90,6 +93,32 @@
     "subdescription": "Tartalmazza az automatizált CI/CD folyamatot (GitHub Actions), Prettier formázást és Git alapú verziókezelést."
   },
   "footer": {
-    "text": "© 2026 Szilva. Minden jog fenntartva."
+    "text": "© 2026 Szilva. Minden jog fenntartva.",
+    "connect": "Kapcsolat"
+  },
+  "teaching": {
+    "eyebrow": "Eszterházy Károly Katolikus Egyetem",
+    "title": "Egyetemi oktatás",
+    "subtitle": "Informatikai kurzusok gyakorlati feladatokkal, nyílt tananyagokkal és projektmunkával.",
+    "repository": "Kurzus GitHub-repója",
+    "courseInfo": "Hivatalos kurzusinformáció",
+    "courses": {
+      "ai": {
+        "title": "Komplex AI alkalmazások fejlesztése",
+        "description": "Mikroszolgáltatás-alapú MI-alkalmazások fejlesztése API-integrációval, RAG-gel, multimodális feldolgozással és MLOps-eszközökkel."
+      },
+      "plsql": {
+        "title": "Adatbázisrendszerek II. (PL/SQL)",
+        "description": "Oracle-adatbázis gyakorlatok PL/SQL-ben, Dockerrel és VS Code Dev Containers fejlesztőkörnyezettel."
+      },
+      "databases": {
+        "title": "Korszerű adatbázisok",
+        "description": "Dokumentum- és gráfadatbázisok modellezése, lekérdezése és használata gyakorlati feladatokon."
+      },
+      "cloud": {
+        "title": "Felhőalapú számítástechnika",
+        "description": "Azure-erőforrások kezelése Terraformmal, infrastruktúra mint kód szemlélettel és CI/CD-folyamatokkal."
+      }
+    }
   }
 }
