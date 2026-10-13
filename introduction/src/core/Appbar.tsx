@@ -13,7 +13,6 @@ import {
   Button,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import TerminalIcon from '@mui/icons-material/Terminal';
 import { useTranslation } from 'react-i18next';
 import { pages } from '../const';
 
@@ -48,11 +47,16 @@ export default function ResponsiveAppBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <TerminalIcon
+          <Box
+            component="img"
+            src="/favicon.svg"
+            alt=""
             sx={{
               display: { xs: 'none', lg: 'flex' },
+              width: 32,
+              height: 32,
               mr: 1,
-              color: 'primary.light',
+              borderRadius: 1,
             }}
           />
 
