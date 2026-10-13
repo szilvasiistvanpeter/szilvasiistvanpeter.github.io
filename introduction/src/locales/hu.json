@@ -28,7 +28,9 @@
     "technologies": "Fókusz és technológiák",
     "courses": {
       "ai": "Komplex AI alkalmazások fejlesztése",
-      "database": "Adatbázisrendszerek II. (PL SQL)"
+      "database": "Adatbázisrendszerek II. (PL SQL)",
+      "nosql": "Korszerű adatbázisok (NoSQL, MongoDB, Neo4j)",
+      "cloud": "Felhőalapú számítástechnika (AWS, Azure, GCP, GitHub Actions)"
     },
     "roles": {
       "lecturer": "Külsős óraadó",

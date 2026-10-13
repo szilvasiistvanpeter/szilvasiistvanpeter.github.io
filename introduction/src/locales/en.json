@@ -28,7 +28,9 @@
     "technologies": "Focus and technologies",
     "courses": {
       "ai": "Developing Complex AI Applications",
-      "database": "Database Systems II (PL/SQL)"
+      "database": "Database Systems II (PL/SQL)",
+      "nosql": "Modern Databases (NoSQL, MongoDB, Neo4j)",
+      "cloud": "Cloud Computing (AWS, Azure, GCP, GitHub Actions)"
     },
     "roles": {
       "lecturer": "External Lecturer",
