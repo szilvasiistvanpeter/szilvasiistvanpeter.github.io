@@ -20,6 +20,16 @@
     }
   },
   "jobs": {
+    "eyebrow": "Career",
+    "title": "Professional experience",
+    "subtitle": "Development and teaching experience, from my current roles back to the start of my career.",
+    "current": "Current",
+    "coursesTitle": "Courses taught",
+    "technologies": "Focus and technologies",
+    "courses": {
+      "ai": "Developing Complex AI Applications",
+      "database": "Database Systems II (PL/SQL)"
+    },
     "roles": {
       "lecturer": "External Lecturer",
       "senior_fullstack": "Senior Fullstack Developer",
