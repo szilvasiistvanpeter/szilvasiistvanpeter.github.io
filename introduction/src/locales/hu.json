@@ -20,6 +20,16 @@
     }
   },
   "jobs": {
+    "eyebrow": "Pályafutás",
+    "title": "Szakmai tapasztalat",
+    "subtitle": "Fejlesztői és oktatói tapasztalat, a legutóbbi szerepkörtől a pályám kezdetéig.",
+    "current": "Jelenlegi",
+    "coursesTitle": "Oktatott kurzusok",
+    "technologies": "Fókusz és technológiák",
+    "courses": {
+      "ai": "Komplex AI alkalmazások fejlesztése",
+      "database": "Adatbázisrendszerek II. (PL SQL)"
+    },
     "roles": {
       "lecturer": "Külsős óraadó",
       "senior_fullstack": "Senior Fullstack Fejlesztő",
