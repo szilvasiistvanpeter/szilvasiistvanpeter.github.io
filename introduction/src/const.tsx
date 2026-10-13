@@ -37,8 +37,8 @@ export const jobs = [
     role: 'jobs.roles.lecturer',
     period: '2026.02 – jelenleg',
     current: true,
-    courses: ['jobs.courses.ai', 'jobs.courses.database'],
-    tech: 'MongoDb, Neo4j, Python, Node.js, Azure, Terraform',
+    courses: ['jobs.courses.ai', 'jobs.courses.database', 'jobs.courses.nosql', 'jobs.courses.cloud'],
+    tech: 'MongoDb, Neo4j, Python, Node.js, Azure, Terraform, PL SQL, GitHub Actions',
   },
   {
     company: 'Siemens',
