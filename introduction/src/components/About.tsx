@@ -12,6 +12,7 @@ import PetsIcon from '@mui/icons-material/Pets';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import DnsOutlinedIcon from '@mui/icons-material/DnsOutlined';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -137,6 +138,19 @@ export default function About() {
                   >
                     <SportsEsportsIcon sx={{ color: 'var(--brand-blue)' }} />
                     <Typography variant="body2">{t('about.gamer')}</Typography>
+                  </Box>
+                </Grid>
+                <Grid size={{ xs: 12, sm: 6 }}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: 2,
+                      mb: 2,
+                    }}
+                  >
+                    <DnsOutlinedIcon sx={{ color: 'var(--brand-blue)' }} />
+                    <Typography variant="body2">{t('about.homelab')}</Typography>
                   </Box>
                 </Grid>
               </Grid>
