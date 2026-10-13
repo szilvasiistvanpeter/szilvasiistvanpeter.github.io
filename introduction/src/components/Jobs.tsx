@@ -60,7 +60,7 @@ export default function Jobs() {
                 }}
               >
                 <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'right' }}>
-                  {job.period}
+                  {job.period.replace('jelenleg', t('jobs.present'))}
                 </Typography>
               </Box>
 
@@ -115,7 +115,7 @@ export default function Jobs() {
                         <Chip
                           size="small"
                           icon={<CalendarMonthOutlinedIcon />}
-                          label={job.period}
+                          label={job.period.replace('jelenleg', t('jobs.present'))}
                           sx={{ display: { xs: 'inline-flex', sm: 'none' }, maxWidth: '100%' }}
                         />
                       </Stack>
