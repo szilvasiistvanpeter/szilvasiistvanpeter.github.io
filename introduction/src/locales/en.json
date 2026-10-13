@@ -17,9 +17,24 @@
       "msc_teacher": "Master's program focusing on pedagogical methods and digital culture education.",
       "msc_eng": "Specialization in data mining algorithms and geographic information systems (GIS).",
       "bsc_prog": "Foundations of software development, creating web applications (.NET)."
-    }
+    },
+    "eyebrow": "Areas of interest",
+    "title": "What I'm focused on",
+    "subtitle": "An overview of my studies in computer science and informatics education."
   },
   "jobs": {
+    "eyebrow": "Career",
+    "title": "Professional experience",
+    "subtitle": "Development and teaching experience, from my current roles back to the start of my career.",
+    "current": "Current",
+    "coursesTitle": "Courses taught",
+    "technologies": "Focus and technologies",
+    "courses": {
+      "ai": "Developing Complex AI Applications",
+      "database": "Database Systems II (PL/SQL)",
+      "nosql": "Modern Databases (NoSQL, MongoDB, Neo4j)",
+      "cloud": "Cloud Computing (AWS, Azure, GCP, GitHub Actions)"
+    },
     "roles": {
       "lecturer": "External Lecturer",
       "senior_fullstack": "Senior Fullstack Developer",
@@ -30,14 +45,32 @@
       "it_teacher": "IT Teacher",
       "prod_it": "Product IT Support",
       "trainee": "Trainee Software Engineer"
-    }
+    },
+    "present": "present"
   },
   "about": {
     "title": "About Me",
     "content": "I am a developer with over 8 years of experience. I was born in Eger and currently live there. Throughout my career, I have proven myself at large companies such as Siemens, Deutsche Telekom, and Accenture. My goal is to deliver innovative solutions, whether it's about industrial automation or modern cloud-based systems.",
-    "pet": "Dog lover and cat enthusiast.",
+    "pet": "Pajti, my rescue dog, has been part of our family since 2022. I also love dogs and cats.",
     "gamer": "Gamer: PlayStation & PC",
-    "relationship": "In happy relationship"
+    "relationship": "In happy relationship",
+    "homelab": "In my free time, I build and improve my own homelab server, exploring my interest in DevOps through personal projects.",
+    "focusEyebrow": "Areas of interest",
+    "focusTitle": "What I'm focused on",
+    "focus": {
+      "development": {
+        "title": "Software development",
+        "description": "Designing and building web applications and full-stack solutions."
+      },
+      "teaching": {
+        "title": "Teaching",
+        "description": "Developing university courses and sharing knowledge in computing."
+      },
+      "homelab": {
+        "title": "Homelab and DevOps",
+        "description": "Improving my own server and exploring DevOps technologies through personal projects."
+      }
+    }
   },
   "contacts": {
     "title": "Get in Touch!",
