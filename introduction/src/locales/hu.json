@@ -48,9 +48,10 @@
   "about": {
     "title": "Rólam röviden",
     "content": "Több mint 8 éves tapasztalattal rendelkező, egri születésű és jelenleg is ott élő fejlesztő vagyok. Pályafutásom során olyan nagyvállalatoknál bizonyítottam, mint a Siemens, a Deutsche Telekom és az Accenture. Célom az innovatív megoldások szállítása, legyen szó ipari automatizálásról vagy modern felhőalapú rendszerekről.",
-    "pet": "Nagy kutyabarát és cicakedvelő.",
+    "pet": "Pajti, a menhelyi kutyám 2022 óta velünk él; nagy kutyabarát és cicakedvelő vagyok.",
     "gamer": "Gamer: PlayStation & PC",
-    "relationship": "Boldog párkapcsolat"
+    "relationship": "Boldog párkapcsolat",
+    "homelab": "Szabadidőmben saját homelab szerveremet fejlesztem, így a DevOps iránti érdeklődésemet otthoni projektekkel is követem."
   },
   "contacts": {
     "title": "Lépjünk kapcsolatba!",
