@@ -13,16 +13,12 @@ import {
   Button,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import TerminalIcon from '@mui/icons-material/Terminal';
 import { useTranslation } from 'react-i18next';
 import { pages } from '../const';
 
 export default function ResponsiveAppBar() {
   const { t, i18n } = useTranslation('translation', { useSuspense: false });
-
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const location = useLocation();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -41,15 +37,26 @@ export default function ResponsiveAppBar() {
   return (
     <AppBar
       position="sticky"
-      sx={{ bgcolor: '#0a1929', borderBottom: '1px solid #1e4976' }}
+      sx={{
+        bgcolor: 'background.paper',
+        color: 'text.primary',
+        borderBottom: 1,
+        borderColor: 'divider',
+        boxShadow: 'none',
+      }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <TerminalIcon
+          <Box
+            component="img"
+            src="/favicon.svg"
+            alt=""
             sx={{
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', lg: 'flex' },
+              width: 32,
+              height: 32,
               mr: 1,
-              color: '#42a5f5',
+              borderRadius: 1,
             }}
           />
 
@@ -60,7 +67,7 @@ export default function ResponsiveAppBar() {
             to="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', lg: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               color: 'inherit',
@@ -70,11 +77,10 @@ export default function ResponsiveAppBar() {
             {t('welcome')}
           </Typography>
 
-          {/* Mobil nézet */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', lg: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="menu"
+              aria-label={t('nav.menu')}
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -90,7 +96,7 @@ export default function ResponsiveAppBar() {
               transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
+              sx={{ display: { xs: 'block', lg: 'none' } }}
             >
               {pages.map((page) => (
                 <MenuItem
@@ -102,10 +108,8 @@ export default function ResponsiveAppBar() {
                 >
                   <Typography
                     sx={{
-                      fontFamily: 'monospace',
-                      fontWeight: 700,
+                      fontWeight: 600,
                       color: 'inherit',
-                      textDecoration: 'none',
                       textAlign: 'center',
                       width: '100%',
                     }}
@@ -117,9 +121,12 @@ export default function ResponsiveAppBar() {
             </Menu>
           </Box>
 
-          {/* Desktop nézet */}
           <Box
-            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, gap: 1 }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', lg: 'flex' },
+              gap: { md: 0, lg: 0.5 },
+            }}
           >
             {pages.map((page) => {
               const isActive = location.pathname === page.path;
@@ -131,15 +138,21 @@ export default function ResponsiveAppBar() {
                   onClick={handleCloseNavMenu}
                   sx={{
                     my: 2,
-                    color: isActive ? '#42a5f5' : 'white',
+                    px: { md: 0.8, lg: 1.2 },
+                    color: isActive ? 'primary.light' : 'text.secondary',
                     display: 'block',
                     textTransform: 'none',
-                    fontWeight: isActive ? 700 : 400,
+                    whiteSpace: 'nowrap',
+                    fontWeight: isActive ? 700 : 500,
                     borderBottom: isActive
-                      ? '2px solid #42a5f5'
+                      ? '2px solid'
                       : '2px solid transparent',
+                    borderBottomColor: isActive ? 'primary.main' : 'transparent',
                     borderRadius: 0,
-                    '&:hover': { bgcolor: 'rgba(66, 165, 245, 0.08)' },
+                    '&:hover': {
+                      color: 'text.primary',
+                      bgcolor: 'action.hover',
+                    },
                   }}
                 >
                   {t(page.name)}
@@ -148,14 +161,17 @@ export default function ResponsiveAppBar() {
             })}
           </Box>
 
-          <Button onClick={toggleLanguage} sx={{ color: 'white', ml: 2 }}>
+          <Button
+            onClick={toggleLanguage}
+            sx={{ color: 'text.primary', ml: { xs: 1, md: 2 }, minWidth: 42 }}
+          >
             {i18n.language === 'hu' ? 'EN' : 'HU'}
           </Button>
           <Box sx={{ flexGrow: 0 }}>
             <Avatar
               alt="Szilva"
               src="/me.jpg"
-              sx={{ border: '2px solid #1e4976' }}
+              sx={{ border: '2px solid', borderColor: 'primary.dark' }}
             />
           </Box>
         </Toolbar>

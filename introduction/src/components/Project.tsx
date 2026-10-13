@@ -26,8 +26,8 @@ export default function Project() {
     <Box
       sx={{
         p: { xs: 2, md: 4 },
-        bgcolor: '#0a1929',
-        color: 'white',
+        bgcolor: 'background.default',
+        color: 'text.primary',
       }}
     >
       <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
@@ -36,9 +36,9 @@ export default function Project() {
             elevation={0}
             sx={{
               p: { xs: 3, md: 5 },
-              bgcolor: '#132f4c',
+              bgcolor: 'background.paper',
               borderRadius: 4,
-              border: '1px solid #1e4976',
+              border: '1px solid', borderColor: 'divider',
               position: 'relative',
               overflow: 'hidden',
             }}
@@ -50,7 +50,7 @@ export default function Project() {
                 right: -20,
                 width: 100,
                 height: 100,
-                bgcolor: 'rgba(66, 165, 245, 0.1)',
+                bgcolor: 'rgba(233, 184, 111, 0.14)',
                 borderRadius: '50%',
                 filter: 'blur(30px)',
               }}
@@ -58,15 +58,15 @@ export default function Project() {
 
             <Typography
               variant="h4"
-              sx={{ fontWeight: 'bold', mb: 1, color: 'var(--brand-blue2)' }}
+              sx={{ fontWeight: 'bold', mb: 1, color: 'primary.light' }}
             >
               Portfolio Project
             </Typography>
-            <Typography variant="subtitle1" sx={{ color: '#b0bec5', mb: 3 }}>
+            <Typography variant="subtitle1" sx={{ color: 'text.secondary', mb: 3 }}>
               {t('project.title')}
             </Typography>
 
-            <Divider sx={{ bgcolor: 'rgba(255,255,255,0.1)', mb: 3 }} />
+            <Divider sx={{ bgcolor: 'divider', mb: 3 }} />
 
             <Grid container spacing={4}>
               <Grid size={{ xs: 12, md: 7 }}>
@@ -76,17 +76,17 @@ export default function Project() {
                 >
                   <TerminalIcon
                     fontSize="small"
-                    sx={{ color: 'var(--brand-blue2)' }}
+                    sx={{ color: 'primary.light' }}
                   />{' '}
                   {t('project.subtitle')}
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: '#e0e0e0', textAlign: 'justify', mb: 2 }}
+                  sx={{ color: 'text.primary', textAlign: 'justify', mb: 2 }}
                 >
                   {t('project.description')}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#aaa', mb: 3 }}>
+                <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
                   {t('project.subdescription')}
                 </Typography>
 
@@ -97,8 +97,8 @@ export default function Project() {
                     href="https://github.com/szilvasiistvanpeter/introduction"
                     target="_blank"
                     sx={{
-                      bgcolor: 'var(--brand-blue2)',
-                      '&:hover': { bgcolor: '#1976d2' },
+                      bgcolor: 'primary.light',
+                      '&:hover': { bgcolor: 'primary.dark' },
                     }}
                   >
                     GitHub Repo
@@ -108,7 +108,7 @@ export default function Project() {
                     startIcon={<DescriptionIcon />}
                     href="https://szilvasiistvanpeter.github.io/docs/"
                     target="_blank"
-                    sx={{ color: 'white', borderColor: '#1e4976' }}
+                    sx={{ color: 'text.primary', borderColor: 'divider' }}
                   >
                     MkDocs
                   </Button>
@@ -122,7 +122,7 @@ export default function Project() {
                 >
                   <IntegrationInstructionsIcon
                     fontSize="small"
-                    sx={{ color: 'var(--brand-blue2)' }}
+                    sx={{ color: 'primary.light' }}
                   />{' '}
                   Stack & Tools
                 </Typography>
@@ -132,8 +132,8 @@ export default function Project() {
                       key={index}
                       label={tech}
                       sx={{
-                        bgcolor: 'rgba(255,255,255,0.05)',
-                        color: 'white',
+                        bgcolor: 'action.hover',
+                        color: 'text.primary',
                         fontSize: '0.75rem',
                       }}
                     />
@@ -144,14 +144,14 @@ export default function Project() {
                   sx={{
                     mt: 3,
                     p: 2,
-                    bgcolor: 'rgba(0,0,0,0.2)',
+                    bgcolor: 'background.default',
                     borderRadius: 2,
                   }}
                 >
                   <Typography
                     variant="caption"
                     sx={{
-                      color: 'var(--brand-blue2)',
+                      color: 'primary.light',
                       fontWeight: 'bold',
                       display: 'block',
                       mb: 1,
@@ -161,7 +161,7 @@ export default function Project() {
                   </Typography>
                   <Typography
                     variant="caption"
-                    sx={{ color: '#888', display: 'block' }}
+                    sx={{ color: 'text.secondary', display: 'block' }}
                   >
                     • Prettier & Linting
                     <br />

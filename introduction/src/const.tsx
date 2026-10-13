@@ -3,6 +3,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PhoneIcon from '@mui/icons-material/Phone';
 import SchoolIcon from '@mui/icons-material/SchoolOutlined';
+import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
+import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
+import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 
 export const contactLinks = [
   {
@@ -130,6 +133,7 @@ export const education = [
 export const pages = [
   { name: 'nav.about', path: '/' },
   { name: 'nav.jobs', path: '/jobs' },
+  { name: 'nav.teaching', path: '/teaching' },
   { name: 'nav.schools', path: '/schools' },
   { name: 'nav.contact', path: '/contact' },
   { name: 'nav.project', path: '/project' },
@@ -142,4 +146,39 @@ export const techStack = [
   'GitHub Actions',
   'Prettier & ESLint',
   'MkDocs',
+];
+
+export const teachingCourses = [
+  {
+    title: 'teaching.courses.ai.title',
+    description: 'teaching.courses.ai.description',
+    topics: ['FastAPI', 'Gemini API', 'RAG', 'ChromaDB', 'MongoDB', 'Neo4j', 'MLOps'],
+    repository: 'https://github.com/ekke-edu/complex-ai-applications',
+    courseInfo: 'https://io.uni-eszterhazy.hu/downloadCourseInfo/101964',
+    icon: <PsychologyOutlinedIcon />,
+  },
+  {
+    title: 'teaching.courses.plsql.title',
+    description: 'teaching.courses.plsql.description',
+    topics: ['Oracle', 'PL/SQL', 'Docker', 'VS Code Dev Containers'],
+    repository: 'https://github.com/ekke-edu/advanced-databases-2',
+    courseInfo: 'https://io.uni-eszterhazy.hu/downloadCourseInfo/101966',
+    icon: <StorageOutlinedIcon />,
+  },
+  {
+    title: 'teaching.courses.databases.title',
+    description: 'teaching.courses.databases.description',
+    topics: ['MongoDB', 'Neo4j', 'NoSQL', 'Cypher'],
+    repository: 'https://github.com/ekke-edu/modern-databases',
+    courseInfo: 'https://io.uni-eszterhazy.hu/downloadCourseInfo/97176',
+    icon: <StorageOutlinedIcon />,
+  },
+  {
+    title: 'teaching.courses.cloud.title',
+    description: 'teaching.courses.cloud.description',
+    topics: ['Azure', 'Terraform', 'Infrastructure as Code', 'GitHub Actions'],
+    repository: 'https://github.com/ekke-edu/cloud-computing',
+    courseInfo: 'https://io.uni-eszterhazy.hu/downloadCourseInfo/101962',
+    icon: <CloudOutlinedIcon />,
+  },
 ];

@@ -73,7 +73,7 @@ export default function Jobs() {
                     mt: 2.5,
                     borderRadius: '50%',
                     bgcolor: job.current ? 'primary.light' : 'text.disabled',
-                    boxShadow: job.current ? '0 0 0 5px rgba(100, 181, 246, 0.12)' : 'none',
+                    boxShadow: job.current ? '0 0 0 5px rgba(136, 201, 167, 0.16)' : 'none',
                     flexShrink: 0,
                     zIndex: 1,
                   }}
