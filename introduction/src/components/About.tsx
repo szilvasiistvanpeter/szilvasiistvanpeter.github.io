@@ -76,7 +76,12 @@ export default function About() {
                 <Chip
                   icon={<LocationOnIcon sx={{ color: 'inherit !important' }} />}
                   label="Eger"
-                  sx={{ bgcolor: 'primary.light', color: 'text.primary' }}
+                  sx={{
+                    bgcolor: 'rgba(233, 184, 111, 0.12)',
+                    color: 'text.primary',
+                    border: '1px solid',
+                    borderColor: 'secondary.dark',
+                  }}
                 />
                 <Chip
                   icon={<FavoriteIcon sx={{ color: 'secondary.main !important' }} />}
