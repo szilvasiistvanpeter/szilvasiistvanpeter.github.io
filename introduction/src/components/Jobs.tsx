@@ -131,7 +131,7 @@ export default function Jobs() {
                               {t('jobs.coursesTitle')}
                             </Typography>
                           </Stack>
-                          <Stack direction="row" useFlexGap flexWrap="wrap" gap={1}>
+                          <Stack direction="row" useFlexGap sx={{ flexWrap: "wrap", gap: 1 }}>
                             {job.courses.map((course) => (
                               <Chip key={course} size="small" label={t(course)} variant="outlined" color="primary" />
                             ))}
@@ -146,7 +146,7 @@ export default function Jobs() {
                         <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 0.75 }}>
                           {t('jobs.technologies')}
                         </Typography>
-                        <Stack direction="row" useFlexGap flexWrap="wrap" gap={0.75}>
+                        <Stack direction="row" useFlexGap sx={{ flexWrap: "wrap", gap: 0.75 }}>
                           {job.tech.split(',').map((technology) => (
                             <Chip
                               key={technology.trim()}
