@@ -4,7 +4,9 @@
     "jobs": "Experience",
     "schools": "Education",
     "contact": "Contact",
-    "project": "Project"
+    "project": "Project",
+    "teaching": "University teaching",
+    "menu": "Menu"
   },
   "welcome": "Plum",
   "education": {
@@ -50,38 +52,39 @@
   },
   "about": {
     "title": "About Me",
-    "content": "I am a developer with over 8 years of experience. I was born in Eger and currently live there. Throughout my career, I have proven myself at large companies such as Siemens, Deutsche Telekom, and Accenture. My goal is to deliver innovative solutions, whether it's about industrial automation or modern cloud-based systems.",
+    "content": "I was born in Eger and still live here. I have been building software for over eight years, and currently work as both a full-stack developer and a university lecturer. My career includes work with Siemens, Deutsche Telekom, and other enterprise teams. I am motivated by building reliable, useful solutions.",
     "pet": "Pajti, my rescue dog, has been part of our family since 2022. I also love dogs and cats.",
     "gamer": "Gamer: PlayStation & PC",
     "relationship": "In happy relationship",
     "homelab": "In my free time, I build and improve my own homelab server, exploring my interest in DevOps through personal projects.",
     "focusEyebrow": "Areas of interest",
-    "focusTitle": "What I'm focused on",
+    "focusTitle": "Building, teaching, experimenting",
     "focus": {
       "development": {
         "title": "Software development",
-        "description": "Designing and building web applications and full-stack solutions."
+        "description": "I build full-stack applications, bringing usable interfaces together with dependable backend services."
       },
       "teaching": {
-        "title": "Teaching",
-        "description": "Developing university courses and sharing knowledge in computing."
+        "title": "University teaching",
+        "description": "At Eszterházy Károly Catholic University, I teach computing through practical assignments and projects."
       },
       "homelab": {
         "title": "Homelab and DevOps",
-        "description": "Improving my own server and exploring DevOps technologies through personal projects."
+        "description": "I explore DevOps tools and automation on a homelab server I build and maintain myself."
       }
     }
   },
   "contacts": {
-    "title": "Get in Touch!",
-    "subtitle": "Whether it's about a professional project, education, or just a cup of coffee in Eger.",
-    "description": "I was born in Eger and currently live there. I work as a Senior Developer from here.",
+    "title": "Let's talk",
+    "subtitle": "For a professional inquiry, a teaching collaboration, or a coffee in Eger, feel free to reach out.",
+    "description": "I live and work in Eger, Hungary. You can reach me directly through the channels below.",
     "labels": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
       "email": "Email",
       "phone": "Phone"
-    }
+    },
+    "location": "Eger, Hungary"
   },
   "project": {
     "title": "Personal Portfolio and Professional Introduction Page",
@@ -90,6 +93,32 @@
     "subdescription": "It includes an automated CI/CD process (GitHub Actions), Prettier formatting, and Git-based version control."
   },
   "footer": {
-    "text": "© 2026 Szilva. All rights reserved."
+    "text": "© 2026 Szilva. All rights reserved.",
+    "connect": "Contact"
+  },
+  "teaching": {
+    "eyebrow": "Eszterházy Károly Catholic University",
+    "title": "University teaching",
+    "subtitle": "Computing courses built around practical assignments, open materials, and project work.",
+    "repository": "Course GitHub repository",
+    "courseInfo": "Official course information",
+    "courses": {
+      "ai": {
+        "title": "Developing Complex AI Applications",
+        "description": "Building microservice-based AI applications with API integrations, RAG, multimodal processing, and MLOps tools."
+      },
+      "plsql": {
+        "title": "Database Systems II (PL/SQL)",
+        "description": "Hands-on Oracle and PL/SQL work using Docker and a VS Code Dev Containers environment."
+      },
+      "databases": {
+        "title": "Modern Databases",
+        "description": "Modeling and querying document and graph databases through practical assignments."
+      },
+      "cloud": {
+        "title": "Cloud Computing",
+        "description": "Managing Azure resources with Terraform, infrastructure as code, and CI/CD workflows."
+      }
+    }
   }
 }
