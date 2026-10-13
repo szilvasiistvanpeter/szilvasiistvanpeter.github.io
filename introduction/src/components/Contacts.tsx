@@ -1,118 +1,144 @@
-import {
-  Box,
-  Typography,
-  Grid,
-  Paper,
-  Button,
-  Stack,
-  Container,
-} from '@mui/material';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { contactLinks } from '../const';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import {
+  Box,
+  Button,
+  Card,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+} from '@mui/material';
+import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import { contactLinks } from '../const';
 
 export default function Contacts() {
   const { t } = useTranslation();
 
   useEffect(() => {
     document.title = t('nav.contact');
-  }, []);
+  }, [t]);
 
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        py: 8,
-        bgcolor: '#0a1929',
-        color: 'white',
-      }}
-    >
-      <Container maxWidth="md">
-        <Typography
-          variant="h3"
-          align="center"
-          sx={{ fontWeight: 'bold', mb: 2, color: 'var(--brand-blue)' }}
-        >
-          {t('contacts.title')}
-        </Typography>
-        <Typography
-          variant="h6"
-          align="center"
-          sx={{ mb: 6, color: '#b0bec5', fontWeight: '400' }}
-        >
-          {t('contacts.subtitle')}
-        </Typography>
+    <Box sx={{ flexGrow: 1, bgcolor: 'background.default', color: 'text.primary' }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 5, md: 8 } }}>
+        <Stack spacing={1} sx={{ mb: { xs: 3, md: 5 }, maxWidth: 720 }}>
+          <Typography
+            variant="overline"
+            sx={{ color: 'primary.light', fontWeight: 700, letterSpacing: 1.5 }}
+          >
+            {t('contacts.eyebrow')}
+          </Typography>
+          <Typography
+            variant="h3"
+            component="h1"
+            sx={{ fontWeight: 750, letterSpacing: '-0.04em' }}
+          >
+            {t('contacts.title')}
+          </Typography>
+          <Typography color="text.secondary">
+            {t('contacts.subtitle')}
+          </Typography>
+        </Stack>
 
-        <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
-          <Grid size={{ xs: 12, md: 7 }}>
-            <Paper
-              elevation={0}
-              sx={{
-                p: 4,
-                bgcolor: '#132f4c',
-                borderRadius: 4,
-                border: '1px solid #1e4976',
-              }}
-            >
-              <Stack spacing={3} sx={{ justifyContent: 'center' }}>
-                {contactLinks.map((link, index) => (
+        <Grid container spacing={2}>
+          {contactLinks.map((link) => {
+            const isExternal = link.href.startsWith('https://');
+            return (
+              <Grid size={{ xs: 12, sm: 6 }} key={link.label}>
+                <Card
+                  variant="outlined"
+                  sx={{
+                    height: '100%',
+                    bgcolor: 'background.paper',
+                    borderColor: 'divider',
+                    borderRadius: 3,
+                    transition: 'border-color 160ms ease, transform 160ms ease',
+                    '&:hover': {
+                      borderColor: 'primary.dark',
+                      transform: 'translateY(-2px)',
+                    },
+                  }}
+                >
                   <Button
-                    key={index}
-                    variant="outlined"
-                    fullWidth
-                    startIcon={link.icon}
+                    component="a"
                     href={link.href}
-                    target="_blank"
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                    fullWidth
                     sx={{
-                      py: 1.5,
+                      minHeight: 112,
+                      p: 2.5,
                       justifyContent: 'flex-start',
-                      color: 'white',
-                      borderColor: 'rgba(66, 165, 245, 0.3)',
+                      textAlign: 'left',
                       textTransform: 'none',
-                      fontSize: '1.1rem',
-                      '&:hover': {
-                        borderColor: 'var(--brand-blue)',
-                        bgcolor: 'rgba(66, 165, 245, 0.05)',
-                      },
+                      color: 'text.primary',
                     }}
                   >
-                    {t(link.label)}
+                    <Stack
+                      direction="row"
+                      spacing={2}
+                      sx={{ width: '100%', alignItems: 'center' }}
+                    >
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          p: 1.25,
+                          borderRadius: 2,
+                          color: 'primary.light',
+                          bgcolor: 'action.hover',
+                        }}
+                      >
+                        {link.icon}
+                      </Box>
+                      <Box sx={{ minWidth: 0, flexGrow: 1 }}>
+                        <Typography
+                          variant="overline"
+                          color="text.secondary"
+                          sx={{ lineHeight: 1.5 }}
+                        >
+                          {t(link.label)}
+                        </Typography>
+                        <Typography
+                          variant="body1"
+                          sx={{ overflowWrap: 'anywhere', fontWeight: 600 }}
+                        >
+                          {link.value}
+                        </Typography>
+                      </Box>
+                      {isExternal && (
+                        <ArrowOutwardRoundedIcon
+                          fontSize="small"
+                          sx={{ color: 'text.secondary' }}
+                        />
+                      )}
+                    </Stack>
                   </Button>
-                ))}
-              </Stack>
-            </Paper>
-          </Grid>
-
-          <Grid size={{ xs: 12, md: 5 }}>
-            <Paper
-              elevation={0}
-              sx={{
-                p: 4,
-                bgcolor: '#132f4c',
-                borderRadius: 4,
-                border: '1px solid #1e4976',
-                textAlign: 'center',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <LocationOnIcon
-                sx={{ fontSize: 60, color: 'var(--brand-blue)', mb: 2 }}
-              />
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85547.77173627031!2d20.309009872487277!3d47.929267553668865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47408d7894b04023%3A0x63adb259948d1c24!2sEger!5e0!3m2!1shu!2shu!4v1778261406423!5m2!1shu!2shu"
-                loading="lazy"
-              ></iframe>
-              <Typography variant="body2" sx={{ color: '#b0bec5' }}>
-                {t('contacts.description')}
-              </Typography>
-            </Paper>
-          </Grid>
+                </Card>
+              </Grid>
+            );
+          })}
         </Grid>
+
+        <Card
+          variant="outlined"
+          sx={{
+            mt: 2,
+            p: { xs: 2, sm: 2.5 },
+            display: 'flex',
+            gap: 1.5,
+            alignItems: 'center',
+            bgcolor: 'background.paper',
+            borderColor: 'divider',
+            borderRadius: 3,
+          }}
+        >
+          <LocationOnOutlinedIcon sx={{ color: 'secondary.main' }} />
+          <Typography variant="body2" color="text.secondary">
+            {t('contacts.location')}
+          </Typography>
+        </Card>
       </Container>
     </Box>
   );
