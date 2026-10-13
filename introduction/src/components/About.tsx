@@ -65,7 +65,7 @@ export default function About() {
                 variant="body1"
                 sx={{ color: 'primary.light', mb: 2 }}
               >
-                Senior Full-Stack Developer
+                {t('about.role')}
               </Typography>
 
               <Stack
