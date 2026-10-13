@@ -40,7 +40,8 @@
       "it_teacher": "IT Teacher",
       "prod_it": "Product IT Support",
       "trainee": "Trainee Software Engineer"
-    }
+    },
+    "present": "present"
   },
   "about": {
     "title": "About Me",
