@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
 import About from './components/About';
 import ResponsiveAppBar from './core/Appbar';
 import Jobs from './components/Jobs';
