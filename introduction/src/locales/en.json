@@ -134,6 +134,9 @@
     "experience": "Professional experience",
     "education": "Education",
     "teaching": "University teaching",
-    "lecturerRole": "University lecturer"
+    "lecturerRole": "University lecturer",
+    "language": "CV language",
+    "hungarian": "Hungarian",
+    "english": "English"
   }
 }
