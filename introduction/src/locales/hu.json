@@ -134,6 +134,9 @@
     "experience": "Szakmai tapasztalat",
     "education": "Tanulmányok",
     "teaching": "Egyetemi oktatás",
-    "lecturerRole": "Egyetemi óraadó"
+    "lecturerRole": "Egyetemi óraadó",
+    "language": "CV nyelve",
+    "hungarian": "Magyar",
+    "english": "Angol"
   }
 }
