@@ -67,6 +67,7 @@ export default function Cv() {
 
         <Box component="article" className="cv-sheet" lang={cvLanguage}>
           <Box className="cv-header">
+            <Typography component="p" className="cv-document-title">{cvT('cv.title')}</Typography>
             <Typography component="h1" className="cv-name">Szilvási István Péter</Typography>
             <Typography className="cv-role">{cvT('about.role')} · {cvT('cv.lecturerRole')}</Typography>
             <Stack className="cv-contact" direction="row" useFlexGap sx={{ flexWrap: 'wrap', gap: 0.5 }}>
