@@ -137,6 +137,7 @@ export const pages = [
   { name: 'nav.schools', path: '/schools' },
   { name: 'nav.contact', path: '/contact' },
   { name: 'nav.project', path: '/project' },
+  { name: 'nav.cv', path: '/cv' },
 ];
 
 export const techStack = [

@@ -36,6 +36,7 @@ export default function ResponsiveAppBar() {
 
   return (
     <AppBar
+      className="site-header"
       position="sticky"
       sx={{
         bgcolor: 'background.paper',

@@ -8,6 +8,7 @@ import Schools from './components/Schools';
 import Contacts from './components/Contacts';
 import Project from './components/Project';
 import Teaching from './components/Teaching';
+import Cv from './components/Cv';
 import ResponsiveFooter from './core/Footer';
 
 const darkTheme = createTheme({
@@ -58,6 +59,7 @@ export default function App() {
           <Route path="/teaching" element={<Teaching />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/project" element={<Project />} />
+          <Route path="/cv" element={<Cv />} />
         </Routes>
         <ResponsiveFooter />
       </Router>
