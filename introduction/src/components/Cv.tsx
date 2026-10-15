@@ -5,7 +5,6 @@ import {
   Button,
   Chip,
   Container,
-  Divider,
   Link,
   Stack,
   ToggleButton,
@@ -13,7 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
-import { contactLinks, education, jobs, teachingCourses } from '../const';
+import { contactLinks, education, jobs } from '../const';
 import './Cv.css';
 
 export default function Cv() {
@@ -24,8 +23,8 @@ export default function Cv() {
   const cvT = i18n.getFixedT(cvLanguage);
 
   useEffect(() => {
-    document.title = t('cv.title');
-  }, [t]);
+    document.title = i18n.getFixedT(cvLanguage)('cv.title');
+  }, [cvLanguage, i18n]);
 
   const selectCvLanguage = (_event: MouseEvent<HTMLElement>, language: 'hu' | 'en' | null) => {
     if (language) setCvLanguage(language);
@@ -68,9 +67,9 @@ export default function Cv() {
 
         <Box component="article" className="cv-sheet" lang={cvLanguage}>
           <Box className="cv-header">
-            <Typography component="h1" className="cv-name">Szilvási István Péter</Typography>
+            <Typography component="h1" variant="h3" className="cv-document-title">{cvT('cv.title')}</Typography>
+            <Typography component="h2" className="cv-name">Szilvási István Péter</Typography>
             <Typography className="cv-role">{cvT('about.role')} · {cvT('cv.lecturerRole')}</Typography>
-            <Typography className="cv-site">Built with: szilvasiistvanpeter.github.io</Typography>
             <Stack className="cv-contact" direction="row" useFlexGap sx={{ flexWrap: 'wrap', gap: 0.5 }}>
               {contactLinks.map((contact) => (
                 <Link key={contact.href} href={contact.href} color="inherit" underline="none">{contact.value}</Link>
@@ -117,19 +116,12 @@ export default function Cv() {
             </Stack>
           </CvSection>
 
-          <CvSection title={cvT('cv.teaching')}>
-            <Stack spacing={1.25}>
-              {teachingCourses.map((course) => (
-                <Box key={course.title} className="cv-entry">
-                  <Typography className="cv-entry-title">{cvT(course.title)}</Typography>
-                  <Typography className="cv-body">{cvT(course.description)}</Typography>
-                  <Stack direction="row" useFlexGap sx={{ flexWrap: 'wrap', gap: 0.5, mt: 0.5 }}>
-                    {course.topics.map((topic) => <Chip className="cv-topic" key={topic} size="small" label={topic} />)}
-                  </Stack>
-                </Box>
-              ))}
-            </Stack>
-          </CvSection>
+          <Box component="footer" className="cv-document-footer">
+            Built with:{' '}
+            <Link href="https://szilvasiistvanpeter.github.io/cv" color="inherit" underline="none">
+              szilvasiistvanpeter.github.io/cv
+            </Link>
+          </Box>
         </Box>
       </Container>
     </Box>
@@ -140,8 +132,7 @@ function CvSection({ title, children }: { title: string; children: ReactNode }) 
   return (
     <Box component="section" className="cv-section">
       <Typography component="h2" className="cv-section-title">{title}</Typography>
-      <Divider className="cv-divider" />
-      {children}
+      <Box className="cv-section-content">{children}</Box>
     </Box>
   );
 }

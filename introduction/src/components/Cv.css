@@ -1,15 +1,26 @@
 .cv-sheet {
   max-width: 850px;
   margin: 0 auto;
-  padding: 48px 58px;
-  color: #000;
+  padding: 46px 54px;
+  color: #111;
   background: #fff;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .cv-header {
-  padding-bottom: 22px;
-  border-bottom: 2px solid #000;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #777;
+}
+
+.cv-sheet .cv-header .cv-document-title {
+  display: block;
+  margin: 0 0 16px;
+  color: #111;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  text-align: center;
 }
 
 .cv-name {
@@ -23,22 +34,14 @@
 
 .cv-role {
   margin-top: 8px;
-  color: #222;
+  color: #111;
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.015em;
-}
-
-.cv-site {
-  margin-top: 8px;
-  color: #222;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .cv-contact {
-  margin-top: 8px;
+  margin-top: 9px;
   color: #111;
   font-size: 0.78rem;
   line-height: 1.5;
@@ -49,29 +52,50 @@
   white-space: pre;
 }
 
+.cv-document-footer {
+  margin-top: 22px;
+  padding-top: 8px;
+  border-top: 1px solid #c7c7c7;
+  color: #444;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  text-align: right;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
 .cv-section {
-  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 138px minmax(0, 1fr);
+  column-gap: 28px;
+  margin-top: 23px;
 }
 
 .cv-section-title {
-  margin-bottom: 7px;
-  color: #000;
-  font-size: 0.82rem;
+  margin: 2px 0 0;
+  color: #111;
+  font-size: 0.74rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  line-height: 1.3;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
-.cv-divider {
-  margin-bottom: 13px;
-  border-color: #000;
-  border-bottom-width: 1px;
+.cv-section-content {
+  min-width: 0;
+  padding-left: 20px;
+  border-left: 1px solid #c7c7c7;
 }
 
 .cv-entry {
   break-inside: avoid;
   page-break-inside: avoid;
+}
+
+.cv-entry + .cv-entry {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e1e1;
 }
 
 .cv-entry > .MuiStack-root:first-child {
@@ -82,52 +106,69 @@
 
 .cv-entry-title {
   color: #000;
-  font-size: 0.88rem;
-  font-weight: 750;
+  font-size: 0.94rem;
+  font-weight: 800;
   line-height: 1.35;
 }
 
 .cv-company {
-  margin-top: 1px;
-  color: #111;
-  font-size: 0.81rem;
+  margin-top: 2px;
+  color: #333;
+  font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
 .cv-period {
   flex-shrink: 0;
-  color: #111;
+  color: #333;
   font-size: 0.76rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 .cv-body {
-  color: #111;
+  color: #222;
   font-size: 0.79rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .cv-detail {
-  color: #333;
+  color: #444;
 }
 
 .cv-topic {
   height: 20px;
-  border: 1px solid #111;
-  border-radius: 2px;
-  color: #000;
+  border: 1px solid #777;
+  border-radius: 3px;
+  color: #111;
   font-size: 0.66rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .cv-sheet {
     padding: 30px 22px;
   }
 
+  .cv-sheet .cv-header .cv-document-title {
+    font-size: 1.8rem !important;
+  }
+
   .cv-name {
     font-size: 1.8rem;
+  }
+
+  .cv-section {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  .cv-section-title {
+    font-size: 0.76rem;
+  }
+
+  .cv-section-content {
+    padding-left: 12px;
   }
 
   .cv-entry > .MuiStack-root:first-child {
@@ -142,7 +183,23 @@
 
 @page {
   size: A4;
-  margin: 14mm;
+  margin: 4mm 14mm;
+
+  @bottom-left {
+    content: "Built with: szilvasiistvanpeter.github.io/cv";
+    color: #555;
+    font-size: 7pt;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  @bottom-right {
+    content: counter(page) "/" counter(pages);
+    color: #555;
+    font-size: 7pt;
+    line-height: 1;
+    vertical-align: middle;
+  }
 }
 
 @media print {
@@ -153,7 +210,7 @@
     min-height: 0;
     width: auto;
     height: auto;
-    color: #000 !important;
+    color: #111 !important;
     background: #fff !important;
     color-scheme: light;
   }
@@ -166,7 +223,7 @@
 
   .cv-page {
     padding: 0 !important;
-    color: #000 !important;
+    color: #111 !important;
     background: #fff !important;
   }
 
@@ -178,10 +235,23 @@
   .cv-sheet {
     max-width: none;
     margin: 0;
-    padding: 0;
-    color: #000;
+    padding: 8mm 0 12mm;
+    color: #111;
     background: #fff;
     box-shadow: none;
+  }
+
+  .cv-section {
+    grid-template-columns: 32mm minmax(0, 1fr);
+    column-gap: 7mm;
+  }
+
+  .cv-section-content {
+    padding-left: 5mm;
+  }
+
+  .cv-document-footer {
+    display: none !important;
   }
 
   .cv-sheet,
@@ -191,7 +261,7 @@
   }
 
   a {
-    color: #000 !important;
+    color: #111 !important;
     text-decoration: none !important;
   }
 }
