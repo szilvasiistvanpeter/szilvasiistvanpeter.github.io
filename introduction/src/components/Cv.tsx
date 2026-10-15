@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import {
   Box,
   Button,
-  Chip,
   Container,
   Link,
   Stack,
