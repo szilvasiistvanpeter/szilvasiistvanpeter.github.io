@@ -12,13 +12,15 @@
   border-bottom: 1px solid #777;
 }
 
-.cv-document-title {
-  margin: 0 0 8px;
+.cv-sheet .cv-header .cv-document-title {
+  display: block;
+  margin: 0 0 16px;
   color: #111;
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
   letter-spacing: -0.025em;
   line-height: 1.15;
+  text-align: center;
 }
 
 .cv-name {
@@ -148,8 +150,8 @@
     padding: 30px 22px;
   }
 
-  .cv-document-title {
-    font-size: 1.55rem;
+  .cv-sheet .cv-header .cv-document-title {
+    font-size: 1.8rem !important;
   }
 
   .cv-name {
@@ -181,7 +183,23 @@
 
 @page {
   size: A4;
-  margin: 14mm;
+  margin: 4mm 14mm;
+
+  @bottom-left {
+    content: "Built with: szilvasiistvanpeter.github.io/cv";
+    color: #555;
+    font-size: 7pt;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  @bottom-right {
+    content: counter(page) "/" counter(pages);
+    color: #555;
+    font-size: 7pt;
+    line-height: 1;
+    vertical-align: middle;
+  }
 }
 
 @media print {
@@ -217,7 +235,7 @@
   .cv-sheet {
     max-width: none;
     margin: 0;
-    padding: 0;
+    padding: 8mm 0 12mm;
     color: #111;
     background: #fff;
     box-shadow: none;
@@ -230,6 +248,10 @@
 
   .cv-section-content {
     padding-left: 5mm;
+  }
+
+  .cv-document-footer {
+    display: none !important;
   }
 
   .cv-sheet,
