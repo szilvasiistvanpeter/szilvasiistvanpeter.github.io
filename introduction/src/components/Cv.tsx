@@ -5,7 +5,6 @@ import {
   Button,
   Chip,
   Container,
-  Divider,
   Link,
   Stack,
   ToggleButton,
@@ -140,8 +139,7 @@ function CvSection({ title, children }: { title: string; children: ReactNode }) 
   return (
     <Box component="section" className="cv-section">
       <Typography component="h2" className="cv-section-title">{title}</Typography>
-      <Divider className="cv-divider" />
-      {children}
+      <Box className="cv-section-content">{children}</Box>
     </Box>
   );
 }
