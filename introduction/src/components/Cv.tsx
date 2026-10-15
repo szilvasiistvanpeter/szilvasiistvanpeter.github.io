@@ -70,6 +70,7 @@ export default function Cv() {
           <Box className="cv-header">
             <Typography component="h1" className="cv-name">Szilvási István Péter</Typography>
             <Typography className="cv-role">{cvT('about.role')} · {cvT('cv.lecturerRole')}</Typography>
+            <Typography className="cv-site">Built with: szilvasiistvanpeter.github.io</Typography>
             <Stack className="cv-contact" direction="row" useFlexGap sx={{ flexWrap: 'wrap', gap: 0.5 }}>
               {contactLinks.map((contact) => (
                 <Link key={contact.href} href={contact.href} color="inherit" underline="none">{contact.value}</Link>
