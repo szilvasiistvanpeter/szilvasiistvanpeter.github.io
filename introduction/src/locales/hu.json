@@ -6,7 +6,8 @@
     "contact": "Kapcsolat",
     "project": "Projektről",
     "teaching": "Egyetemi oktatás",
-    "menu": "Menü"
+    "menu": "Menü",
+    "cv": "Önéletrajz"
   },
   "welcome": "Szilva",
   "education": {
@@ -122,5 +123,17 @@
         "description": "Azure-erőforrások kezelése Terraformmal, infrastruktúra mint kód szemlélettel és CI/CD-folyamatokkal."
       }
     }
+  },
+  "cv": {
+    "eyebrow": "Szakmai profil",
+    "title": "Önéletrajz",
+    "printHint": "Nyomtasd ki vagy mentsd PDF-ként a böngésző nyomtatási ablakában.",
+    "download": "PDF mentése",
+    "profile": "Szakmai összefoglaló",
+    "summary": "Több mint tízéves tapasztalattal rendelkező szoftverfejlesztő és egyetemi oktató vagyok. Full-stack alkalmazások fejlesztésén dolgozom nagyvállalati környezetben, emellett gyakorlati informatikai kurzusokat tartok. A homelab szerveremen DevOps eszközökkel és automatizálással kísérletezem.",
+    "experience": "Szakmai tapasztalat",
+    "education": "Tanulmányok",
+    "teaching": "Egyetemi oktatás",
+    "lecturerRole": "Egyetemi óraadó"
   }
 }
