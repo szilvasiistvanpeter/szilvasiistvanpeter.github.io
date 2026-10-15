@@ -7,6 +7,7 @@ export default function ResponsiveFooter() {
   return (
     <Box
       component="footer"
+      className="site-footer"
       sx={{
         mt: 'auto',
         py: { xs: 3, md: 4 },
