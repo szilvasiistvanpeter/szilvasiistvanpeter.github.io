@@ -12,7 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
-import { contactLinks, education, jobs, teachingCourses } from '../const';
+import { contactLinks, education, jobs } from '../const';
 import './Cv.css';
 
 export default function Cv() {
@@ -116,19 +116,6 @@ export default function Cv() {
             </Stack>
           </CvSection>
 
-          <CvSection title={cvT('cv.teaching')}>
-            <Stack spacing={1.25}>
-              {teachingCourses.map((course) => (
-                <Box key={course.title} className="cv-entry">
-                  <Typography className="cv-entry-title">{cvT(course.title)}</Typography>
-                  <Typography className="cv-body">{cvT(course.description)}</Typography>
-                  <Stack direction="row" useFlexGap sx={{ flexWrap: 'wrap', gap: 0.5, mt: 0.5 }}>
-                    {course.topics.map((topic) => <Chip className="cv-topic" key={topic} size="small" label={topic} />)}
-                  </Stack>
-                </Box>
-              ))}
-            </Stack>
-          </CvSection>
         </Box>
       </Container>
     </Box>
