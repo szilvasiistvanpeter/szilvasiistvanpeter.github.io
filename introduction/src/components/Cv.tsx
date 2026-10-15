@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useState, type MouseEvent, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   Box,
@@ -27,7 +27,7 @@ export default function Cv() {
     document.title = t('cv.title');
   }, [t]);
 
-  const selectCvLanguage = (_event: React.MouseEvent<HTMLElement>, language: 'hu' | 'en' | null) => {
+  const selectCvLanguage = (_event: MouseEvent<HTMLElement>, language: 'hu' | 'en' | null) => {
     if (language) setCvLanguage(language);
   };
 
