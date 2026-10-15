@@ -1,36 +1,39 @@
 .cv-sheet {
   max-width: 850px;
   margin: 0 auto;
-  padding: 48px 56px;
-  color: #202522;
+  padding: 48px 58px;
+  color: #000;
   background: #fff;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.24);
 }
 
 .cv-header {
-  padding-bottom: 20px;
-  border-bottom: 2px solid #3e725a;
+  padding-bottom: 22px;
+  border-bottom: 2px solid #000;
 }
 
 .cv-name {
   margin: 0;
-  font-size: 2.25rem;
-  font-weight: 750;
-  letter-spacing: -0.04em;
-  line-height: 1.15;
+  color: #000;
+  font-size: 2.35rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
 }
 
 .cv-role {
-  margin-top: 5px;
-  color: #466b56;
+  margin-top: 8px;
+  color: #222;
   font-size: 1rem;
   font-weight: 600;
+  letter-spacing: 0.015em;
 }
 
 .cv-contact {
-  margin-top: 12px;
-  color: #343b36;
-  font-size: 0.82rem;
+  margin-top: 14px;
+  color: #111;
+  font-size: 0.78rem;
+  line-height: 1.5;
 }
 
 .cv-contact a:not(:last-child)::after {
@@ -39,21 +42,23 @@
 }
 
 .cv-section {
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .cv-section-title {
-  margin-bottom: 5px;
-  color: #315b45;
-  font-size: 0.95rem;
-  font-weight: 750;
-  letter-spacing: 0.09em;
+  margin-bottom: 7px;
+  color: #000;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
   text-transform: uppercase;
 }
 
 .cv-divider {
-  margin-bottom: 12px;
-  border-color: #a9b8ad;
+  margin-bottom: 13px;
+  border-color: #000;
+  border-bottom-width: 1px;
 }
 
 .cv-entry {
@@ -61,47 +66,69 @@
   page-break-inside: avoid;
 }
 
+.cv-entry > .MuiStack-root:first-child {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 14px;
+}
+
 .cv-entry-title {
-  color: #202522;
-  font-size: 0.9rem;
-  font-weight: 700;
+  color: #000;
+  font-size: 0.88rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.cv-company {
+  margin-top: 1px;
+  color: #111;
+  font-size: 0.81rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .cv-period {
   flex-shrink: 0;
-  color: #56635a;
-  font-size: 0.78rem;
+  color: #111;
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 .cv-body {
-  color: #343b36;
-  font-size: 0.82rem;
+  color: #111;
+  font-size: 0.79rem;
   line-height: 1.45;
 }
 
 .cv-detail {
-  color: #56635a;
+  color: #333;
 }
 
 .cv-topic {
-  height: 21px;
-  border: 1px solid #c5d1c8;
-  color: #405348;
-  font-size: 0.68rem;
+  height: 20px;
+  border: 1px solid #111;
+  border-radius: 2px;
+  color: #000;
+  font-size: 0.66rem;
 }
 
 @media (max-width: 600px) {
   .cv-sheet {
-    padding: 28px 22px;
+    padding: 30px 22px;
   }
 
   .cv-name {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+  }
+
+  .cv-entry > .MuiStack-root:first-child {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2px;
   }
 
   .cv-period {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
   }
 }
 
@@ -118,7 +145,7 @@
     min-height: 0;
     width: auto;
     height: auto;
-    color: #202522 !important;
+    color: #000 !important;
     background: #fff !important;
     color-scheme: light;
   }
@@ -131,7 +158,7 @@
 
   .cv-page {
     padding: 0 !important;
-    color: #202522 !important;
+    color: #000 !important;
     background: #fff !important;
   }
 
@@ -144,15 +171,9 @@
     max-width: none;
     margin: 0;
     padding: 0;
-    color: #202522;
+    color: #000;
     background: #fff;
     box-shadow: none;
-  }
-
-  .cv-section,
-  .cv-entry {
-    break-inside: avoid;
-    page-break-inside: avoid;
   }
 
   .cv-sheet,
@@ -162,7 +183,7 @@
   }
 
   a {
-    color: #202522 !important;
+    color: #000 !important;
     text-decoration: none !important;
   }
 }
