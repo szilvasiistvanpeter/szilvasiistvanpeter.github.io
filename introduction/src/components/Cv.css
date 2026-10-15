@@ -12,6 +12,15 @@
   border-bottom: 1px solid #777;
 }
 
+.cv-document-title {
+  margin: 0 0 8px;
+  color: #111;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
 .cv-name {
   margin: 0;
   color: #000;
@@ -137,6 +146,10 @@
 @media (max-width: 650px) {
   .cv-sheet {
     padding: 30px 22px;
+  }
+
+  .cv-document-title {
+    font-size: 1.55rem;
   }
 
   .cv-name {
