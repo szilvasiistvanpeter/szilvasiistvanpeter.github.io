@@ -6,7 +6,8 @@
     "contact": "Contact",
     "project": "Project",
     "teaching": "University teaching",
-    "menu": "Menu"
+    "menu": "Menu",
+    "cv": "CV"
   },
   "welcome": "Plum",
   "education": {
@@ -122,5 +123,17 @@
         "description": "Managing Azure resources with Terraform, infrastructure as code, and CI/CD workflows."
       }
     }
+  },
+  "cv": {
+    "eyebrow": "Professional profile",
+    "title": "Curriculum Vitae",
+    "printHint": "Print or save as PDF from your browser's print dialog.",
+    "download": "Save as PDF",
+    "profile": "Professional summary",
+    "summary": "I am a software developer and university lecturer with over ten years of experience. I build full-stack applications in enterprise environments and teach practical computing courses. On my homelab server, I explore DevOps tools and automation.",
+    "experience": "Professional experience",
+    "education": "Education",
+    "teaching": "University teaching",
+    "lecturerRole": "University lecturer"
   }
 }
