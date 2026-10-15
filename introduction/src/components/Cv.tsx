@@ -23,8 +23,8 @@ export default function Cv() {
   const cvT = i18n.getFixedT(cvLanguage);
 
   useEffect(() => {
-    document.title = t('cv.title');
-  }, [t]);
+    document.title = i18n.getFixedT(cvLanguage)('cv.title');
+  }, [cvLanguage, i18n]);
 
   const selectCvLanguage = (_event: MouseEvent<HTMLElement>, language: 'hu' | 'en' | null) => {
     if (language) setCvLanguage(language);
@@ -69,7 +69,6 @@ export default function Cv() {
           <Box className="cv-header">
             <Typography component="h1" className="cv-name">Szilvási István Péter</Typography>
             <Typography className="cv-role">{cvT('about.role')} · {cvT('cv.lecturerRole')}</Typography>
-            <Typography className="cv-site">Built with: szilvasiistvanpeter.github.io</Typography>
             <Stack className="cv-contact" direction="row" useFlexGap sx={{ flexWrap: 'wrap', gap: 0.5 }}>
               {contactLinks.map((contact) => (
                 <Link key={contact.href} href={contact.href} color="inherit" underline="none">{contact.value}</Link>
@@ -116,6 +115,12 @@ export default function Cv() {
             </Stack>
           </CvSection>
 
+          <Box component="footer" className="cv-document-footer">
+            Built with:{' '}
+            <Link href="https://szilvasiistvanpeter.github.io/cv" color="inherit" underline="none">
+              szilvasiistvanpeter.github.io/cv
+            </Link>
+          </Box>
         </Box>
       </Container>
     </Box>
