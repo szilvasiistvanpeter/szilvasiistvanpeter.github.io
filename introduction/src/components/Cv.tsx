@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, Button, Chip, Container, Divider, Link, Stack, Typography } from '@mui/material';
 import PictureAsPdfOutlinedIcon from '@mui/icons-material/PictureAsPdfOutlined';
@@ -88,7 +88,7 @@ export default function Cv() {
   );
 }
 
-function CvSection({ title, children }: { title: string; children: React.ReactNode }) {
+function CvSection({ title, children }: { title: string; children: ReactNode }) {
   return (
     <Box component="section" className="cv-section">
       <Typography component="h2" className="cv-section-title">{title}</Typography>
