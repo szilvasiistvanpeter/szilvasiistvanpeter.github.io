@@ -6,7 +6,7 @@ describe('Schools', () => {
   it('renders the translated education heading and degree', () => {
     render(<Schools />);
     expect(document.title).toBe('Tanulmányok');
-    expect(screen.getByText('Tanulmányok')).toBeInTheDocument();
+    expect(screen.getByText('Ami most foglalkoztat')).toBeInTheDocument();
     expect(screen.getByText('Mérnökinformatikus MSc (Kiváló minősítés)')).toBeInTheDocument();
   });
 });
