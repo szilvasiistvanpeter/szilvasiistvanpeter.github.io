@@ -1,59 +1,15 @@
-name: Test, Build, and Deploy
+name: Validate and deploy portfolio
 
 on:
+  pull_request:
   push:
     branches: [main]
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read
 
 jobs:
-  # ---------------------------------------------------
-  # JOB 1: Quality Checks (Tests, Types, Security)
-  # ---------------------------------------------------
-  test-and-audit:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: introduction
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "pnpm"
-          cache-dependency-path: introduction/pnpm-lock.yaml
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Test (Typecheck)
-        run: pnpm tsc
-
-      #- name: Run Vitest
-      #  run: pnpm run test --run
-
-      - name: Run Audit
-        run: pnpm audit --audit-level=high
-
-  # ---------------------------------------------------
-  # JOB 2: Build Artifacts (React & MkDocs)
-  # ---------------------------------------------------
-  build:
-    needs: test-and-audit # Waits for tests to pass!
+  validate:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -61,55 +17,71 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # --- Frontend Environment Setup ---
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-
-      - name: Setup Node
+          version: 11.25.0
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "pnpm"
+          node-version: 24
+          cache: pnpm
           cache-dependency-path: introduction/pnpm-lock.yaml
-
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Test
+        run: pnpm test --run
+      - name: Build portfolio
+        run: pnpm build
 
-      # --- Documentation Environment Setup ---
+  build-pages:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: introduction
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: introduction/pnpm-lock.yaml
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build portfolio
+        run: pnpm build
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-
       - name: Install MkDocs
         run: pip install mkdocs-material
-
-      # --- Build Process ---
-      - name: Build React App
-        run: pnpm build
-
-      - name: Create 404 page for SPA
-        run: cp dist/index.html dist/404.html
-
-      - name: Build Documentation
+      - name: Build docs into the portfolio artifact
         run: mkdocs build -f mkdocs.yml --site-dir dist/docs
-
-      - name: Upload artifact
+      - name: Preserve SPA fallback for GitHub Pages
+        run: cp dist/index.html dist/404.html
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: introduction/dist
 
-  # ---------------------------------------------------
-  # JOB 3: Deploy to GitHub Pages
-  # ---------------------------------------------------
   deploy:
-    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build-pages
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
