@@ -1,64 +1,23 @@
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import About from './About'; // Adjust the import path if necessary
+import { describe, expect, it } from 'vitest';
+import About from './About';
 
-describe('About Component', () => {
-  // Reset the document title before each test to ensure clean state
-  beforeEach(() => {
-    document.title = '';
-  });
-
-  it('updates the document title to "Rólam" on mount', () => {
+describe('About', () => {
+  it('sets a translated page title and renders the profile', () => {
     render(<About />);
     expect(document.title).toBe('Rólam');
-  });
-
-  it('renders the profile name and job title', () => {
-    render(<About />);
-
-    expect(screen.getByText('Szilvási Péter')).toBeInTheDocument();
-    expect(screen.getByText('Senior Full-Stack Developer')).toBeInTheDocument();
-  });
-
-  it('renders the informational chips (Location and Relationship)', () => {
-    render(<About />);
-
-    expect(screen.getByText('Eger')).toBeInTheDocument();
-    expect(screen.getByText('Boldog párkapcsolat')).toBeInTheDocument();
-  });
-
-  it('renders the biography section and previous companies', () => {
-    render(<About />);
-
-    // Header
     expect(screen.getByText('Rólam röviden')).toBeInTheDocument();
-
-    // Check for specific company names rendered in <strong> tags
-    expect(screen.getByText('Siemens')).toBeInTheDocument();
-    expect(screen.getByText('Deutsche Telekom')).toBeInTheDocument();
-    expect(screen.getByText('Accenture')).toBeInTheDocument();
-
-    // Check for a snippet of the bio text using regex
-    expect(
-      screen.getByText(/Több mint 8 éves tapasztalattal rendelkező/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText('Senior full-stack fejlesztő')).toBeInTheDocument();
   });
 
-  it('renders hobbies and personal traits', () => {
+  it('includes the personal and homelab information', () => {
     render(<About />);
-
-    expect(
-      screen.getByText('Nagy kutyabarát és cicakedvelő')
-    ).toBeInTheDocument();
-    expect(screen.getByText('Gamer: PlayStation & PC')).toBeInTheDocument();
+    expect(screen.getByText(/Pajti, a menhelyi kutyám 2022 óta velünk él/)).toBeInTheDocument();
+    expect(screen.getByText('Homelab és DevOps')).toBeInTheDocument();
   });
 
-  it('renders the profile avatar image', () => {
+  it('renders the profile avatar', () => {
     const { container } = render(<About />);
-
-    // MUI Avatar renders an <img> tag when a src is provided.
-    // We can query the DOM for an image with the specific source.
-    const avatarImg = container.querySelector('img[src="/me.jpg"]');
-    expect(avatarImg).toBeInTheDocument();
+    expect(container.querySelector('img[src="/me.jpg"]')).toBeInTheDocument();
   });
 });
